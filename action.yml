@@ -35,5 +35,5 @@ outputs:
     description: 'The environment URL of the deployment'
 
 runs:
-  using: node
+  using: node20
   main: dist/index.js
