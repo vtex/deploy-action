@@ -16,9 +16,9 @@ export async function run(): Promise<void> {
   }
   const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure}`
 
-  const appId = getInput('appId')
-  const installationId = getInput('installationId')
-  const privateKey = getInput('privateKey')
+  const appId = process.env.DK_CICD_GITHUB_APP_ID
+  const installationId = process.env.DK_CICD_GITHUB_INSTALLATION_ID
+  const privateKey = process.env.DK_CICD_GITHUB_PK
   const octokit = new Octokit({
     authStrategy: createAppAuth,
     auth: {

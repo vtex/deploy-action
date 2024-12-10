@@ -30351,9 +30351,9 @@ function run() {
             creator
         };
         const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure}`;
-        const appId = (0, core_1.getInput)('appId');
-        const installationId = (0, core_1.getInput)('installationId');
-        const privateKey = (0, core_1.getInput)('privateKey');
+        const appId = process.env.DK_CICD_GITHUB_APP_ID;
+        const installationId = process.env.DK_CICD_GITHUB_INSTALLATION_ID;
+        const privateKey = process.env.DK_CICD_GITHUB_PK;
         const octokit = new rest_1.Octokit({
             authStrategy: auth_app_1.createAppAuth,
             auth: {
