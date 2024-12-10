@@ -18,7 +18,9 @@ export async function run(): Promise<void> {
 
   const appId = process.env.DK_CICD_GITHUB_APP_ID || ''
   const installationId = process.env.DK_CICD_GITHUB_INSTALLATION_ID || ''
-  const privateKey = process.env.DK_CICD_GITHUB_PK ? process.env.DK_CICD_GITHUB_PK.replaceAll(`"`, ``).replaceAll(`\\n`, `\n`) : ''
+  const privateKey = process.env.DK_CICD_GITHUB_PK
+    ? process.env.DK_CICD_GITHUB_PK.replaceAll(`"`, ``).replaceAll(`\\n`, `\n`)
+    : ''
   const octokit = new Octokit({
     authStrategy: createAppAuth,
     auth: {

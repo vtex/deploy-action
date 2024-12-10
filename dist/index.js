@@ -30351,9 +30351,11 @@ function run() {
             creator
         };
         const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure}`;
-        const appId = process.env.DK_CICD_GITHUB_APP_ID;
-        const installationId = process.env.DK_CICD_GITHUB_INSTALLATION_ID;
-        const privateKey = process.env.DK_CICD_GITHUB_PK;
+        const appId = process.env.DK_CICD_GITHUB_APP_ID || '';
+        const installationId = process.env.DK_CICD_GITHUB_INSTALLATION_ID || '';
+        const privateKey = process.env.DK_CICD_GITHUB_PK
+            ? process.env.DK_CICD_GITHUB_PK.replaceAll(`"`, ``).replaceAll(`\\n`, `\n`)
+            : '';
         const octokit = new rest_1.Octokit({
             authStrategy: auth_app_1.createAppAuth,
             auth: {
