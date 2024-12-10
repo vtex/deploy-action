@@ -1,0 +1,39 @@
+name: 'Deployment Action'
+description: 'Creates a GitHub Deployment'
+author: 'DK'
+
+branding:
+  icon: 'arrow-up'
+  color: 'gray-dark'
+
+inputs:
+  environment:
+    description: 'Deployment environment'
+    required: true
+  infrastructure:
+    description: 'Deployment infrastructure'
+    required: true
+  application:
+    description: 'Application name'
+    required: true
+  privateKey:
+    description: 'Private key'
+    required: true
+  installationId:
+    description: 'GitHub Installation ID'
+    required: true
+  appId:
+    description: 'GitHub App ID'
+    required: true
+
+outputs:
+  deployment_id:
+    description: 'The ID of the created deployment'
+  deployment_url:
+    description: 'The URL of the created deployment'
+  environment_url:
+    description: 'The environment URL of the deployment'
+
+runs:
+  using: node
+  main: dist/index.js
