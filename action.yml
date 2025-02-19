@@ -16,6 +16,9 @@ inputs:
   application:
     description: 'Application name'
     required: true
+  awsAccount:
+    description: 'AWS Account ID'
+    required: true
 
 runs:
   using: node20
