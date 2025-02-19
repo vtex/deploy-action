@@ -9,12 +9,14 @@ export async function run(): Promise<void> {
   const environment = getInput('environment')
   const application = getInput('application')
   const infrastructure = getInput('infrastructure')
+  const awsAccount = getInput('awsAccount')
   const payload = {
     application,
     infrastructure,
-    creator
+    creator,
+    awsAccount
   }
-  const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure}`
+  const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure} ${awsAccount}`
 
   const appId = getInput('appId')
   const installationId = getInput('installationId') || ''
@@ -39,6 +41,7 @@ export async function run(): Promise<void> {
     description: description,
     payload,
     auto_merge: false,
+    auto_inactive: false,
     required_contexts: []
   })
   console.log(description)
