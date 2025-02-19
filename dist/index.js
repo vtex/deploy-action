@@ -30345,12 +30345,14 @@ function run() {
         const environment = (0, core_1.getInput)('environment');
         const application = (0, core_1.getInput)('application');
         const infrastructure = (0, core_1.getInput)('infrastructure');
+        const awsAccount = (0, core_1.getInput)('awsAccount');
         const payload = {
             application,
             infrastructure,
-            creator
+            creator,
+            awsAccount
         };
-        const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure}`;
+        const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure} ${awsAccount}`;
         const appId = (0, core_1.getInput)('appId');
         const installationId = (0, core_1.getInput)('installationId') || '';
         const privateKey = (0, core_1.getInput)('privateKey')
@@ -30372,6 +30374,7 @@ function run() {
             description: description,
             payload,
             auto_merge: false,
+            auto_inactive: false,
             required_contexts: []
         });
         console.log(description);
