@@ -19,6 +19,10 @@ inputs:
   awsAccount:
     description: 'AWS Account ID'
     required: true
+  useLatestTemplate:
+    description: 'Use the latest template configuration'
+    required: false
+    default: 'false'
 
 runs:
   using: node20
