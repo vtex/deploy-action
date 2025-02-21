@@ -22,7 +22,7 @@ inputs:
   useLatestTemplate:
     description: 'Use the latest template configuration'
     required: false
-    default: 'false'
+    default: 'true'
 
 runs:
   using: node20
