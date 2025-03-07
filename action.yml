@@ -19,8 +19,8 @@ inputs:
   awsAccount:
     description: 'AWS Account ID'
     required: true
-  useLatestTemplate:
-    description: 'Use the latest template configuration'
+  useLatestManifest:
+    description: 'Use the latest manifest configuration'
     required: false
     default: 'false'
 
