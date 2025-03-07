@@ -22,7 +22,7 @@ inputs:
   useLatestManifest:
     description: 'Use the latest manifest configuration'
     required: false
-    default: 'false'
+    default: 'true'
 
 runs:
   using: node20
