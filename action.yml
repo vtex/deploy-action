@@ -20,9 +20,9 @@ inputs:
     description: 'AWS Account ID'
     required: true
   useLatestManifest:
-    description: 'Use the latest manifest configuration'
+    description: 'Use latest manifest'
     required: false
-    default: 'true'
+    default: 'false'
 
 runs:
   using: node20
