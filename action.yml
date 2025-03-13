@@ -23,6 +23,10 @@ inputs:
     description: 'Use latest manifest'
     required: false
     default: 'false'
+  useArtifactFrom:
+    description: 'Use Artifact from'
+    required: false
+    default: ''
 
 runs:
   using: node20
