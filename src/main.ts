@@ -11,12 +11,14 @@ export async function run(): Promise<void> {
   const infrastructure = getInput('infrastructure')
   const awsAccount = getInput('awsAccount')
   const useLatestManifest = getInput('useLatestManifest')
+  const useArtifactFrom = getInput('useArtifactFrom')
   const payload = {
     application,
     infrastructure,
     creator,
     awsAccount,
-    useLatestManifest
+    useLatestManifest,
+    useArtifactFrom
   }
   const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure} ${awsAccount}`
 
