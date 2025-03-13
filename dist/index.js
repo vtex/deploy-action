@@ -30346,11 +30346,15 @@ function run() {
         const application = (0, core_1.getInput)('application');
         const infrastructure = (0, core_1.getInput)('infrastructure');
         const awsAccount = (0, core_1.getInput)('awsAccount');
+        const useLatestManifest = (0, core_1.getInput)('useLatestManifest');
+        const useArtifactFrom = (0, core_1.getInput)('useArtifactFrom');
         const payload = {
             application,
             infrastructure,
             creator,
-            awsAccount
+            awsAccount,
+            useLatestManifest,
+            useArtifactFrom
         };
         const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure} ${awsAccount}`;
         const appId = (0, core_1.getInput)('appId');
