@@ -51,5 +51,7 @@ export async function run(): Promise<void> {
     auto_inactive: false,
     required_contexts: []
   })
+  console.log("testing")
+  console.log(shortRef)
   console.log(description)
 }

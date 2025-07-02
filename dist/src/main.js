@@ -52,6 +52,8 @@ function run() {
             auto_inactive: false,
             required_contexts: []
         });
+        console.log("testing");
+        console.log(shortRef);
         console.log(description);
     });
 }
