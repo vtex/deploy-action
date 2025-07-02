@@ -20,7 +20,9 @@ export async function run(): Promise<void> {
     useLatestManifest,
     useArtifactFrom
   }
+  console.log(ref)
   const shortRef = ref.split('/').pop()
+  console.log(shortRef)
   const description = `Deploy: ${application} ${shortRef} ${environment} ${infrastructure} ${awsAccount}`
 
   const appId = getInput('appId')

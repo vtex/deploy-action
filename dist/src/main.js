@@ -24,7 +24,9 @@ function run() {
             useLatestManifest,
             useArtifactFrom
         };
+        console.log(ref);
         const shortRef = ref.split('/').pop();
+        console.log(shortRef);
         const description = `Deploy: ${application} ${shortRef} ${environment} ${infrastructure} ${awsAccount}`;
         const appId = (0, core_1.getInput)('appId');
         const installationId = (0, core_1.getInput)('installationId') || '';
