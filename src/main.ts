@@ -20,6 +20,7 @@ export async function run(): Promise<void> {
     useLatestManifest,
     useArtifactFrom
   }
+  const shortRef = ref.split('/').pop()
   const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure} ${awsAccount}`
 
   const appId = getInput('appId')
@@ -40,7 +41,7 @@ export async function run(): Promise<void> {
   await octokit.repos.createDeployment({
     owner,
     repo,
-    ref,
+    ref: shortRef,
     environment,
     description: description,
     payload,

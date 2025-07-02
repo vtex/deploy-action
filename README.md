@@ -1,3 +1,3 @@
 # deploy-action
 
-project inspired on:
+Action to allow create a deployment on GitHub.
