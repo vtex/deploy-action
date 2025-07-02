@@ -25,7 +25,7 @@ function run() {
             useArtifactFrom
         };
         const shortRef = ref.split('/').pop();
-        const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure} ${awsAccount}`;
+        const description = `Deploy: ${application} ${shortRef} ${environment} ${infrastructure} ${awsAccount}`;
         const appId = (0, core_1.getInput)('appId');
         const installationId = (0, core_1.getInput)('installationId') || '';
         const privateKey = (0, core_1.getInput)('privateKey')

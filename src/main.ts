@@ -21,7 +21,7 @@ export async function run(): Promise<void> {
     useArtifactFrom
   }
   const shortRef = ref.split('/').pop()
-  const description = `Deploy: ${application} ${ref} ${environment} ${infrastructure} ${awsAccount}`
+  const description = `Deploy: ${application} ${shortRef} ${environment} ${infrastructure} ${awsAccount}`
 
   const appId = getInput('appId')
   const installationId = getInput('installationId') || ''
